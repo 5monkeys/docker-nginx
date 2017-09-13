@@ -5,6 +5,7 @@ RUN apt-get --yes update && \
 
 COPY nginx.conf /etc/nginx/
 COPY default.conf /etc/nginx/conf.d/
+COPY render.sh /
 COPY docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
