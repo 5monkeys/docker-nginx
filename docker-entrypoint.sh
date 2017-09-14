@@ -16,6 +16,6 @@ if [ ! -f "/etc/nginx/ssl/cert.pem" ]; then
 fi
 
 # Render nginx templates
-/render.sh
+/render.sh /etc/nginx/**/*.template
 
 exec "$@"
