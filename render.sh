@@ -11,7 +11,7 @@ render() {
 }
 
 echo "Rendering templates:"
-for f in ${TEMPLATE_PATH:-${1}}; do
+for f in ${TEMPLATE_PATH:-$@}; do
     if [ -f ${f} ];
     then
         echo "- ${f}"
