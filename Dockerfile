@@ -1,7 +1,7 @@
 FROM nginx:latest
 
 RUN apt-get --yes update && \
-    apt-get --yes install openssl
+    apt-get --yes install curl openssl
 
 COPY nginx.conf /etc/nginx/
 COPY default.conf /etc/nginx/conf.d/
