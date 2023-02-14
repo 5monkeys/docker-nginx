@@ -1,4 +1,5 @@
 # This part is taken directly from https://github.com/nginxinc/docker-nginx/blob/master/modules/Dockerfile
+# with some minor changes (ENABLED_MODULES default value and skip copying modules)
 FROM nginx:mainline as builder
 
 ARG ENABLED_MODULES=headers-more
@@ -9,7 +10,7 @@ RUN set -ex \
         exit 1; \
     fi
 
-COPY ./ /modules/
+# COPY ./ /modules/
 
 RUN set -ex \
     && apt update \
